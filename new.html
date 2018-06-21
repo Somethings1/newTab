@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New tab</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        @font-face {
+            src: url(fonts/digital-7.ttf);
+            font-family: digital;
+        }
+        @font-face {
+            src: url(fonts/Nunito-Regular.ttf);
+            font-family: sans;
+        }
+        @keyframes hello{
+            0% { opacity: 0; }
+            30% { opacity: 1; }
+            70% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .welcome {
+            font-size: 64px;
+            font-family: sans;
+            color: white;
+            font-weight: lighter;
+            opacity: 0;
+            margin-bottom: 50px;
+            animation-name: hello;
+            animation-duration: 10s;
+            animation-delay: .5s;
+        }
+        .clock {
+            font-family: digital;
+            color: white;
+            font-size: 64px;
+        }
+        .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+        .background::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .1);
+            z-index: -997;
+        }
+        .background video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: -998
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background" id="background">
+            <video src="videos/FJ2.mp4" loop autoplay id="video"></video>
+        </div>
+        <h1 class="welcome" id="welcome"></h1>
+        <h3 class="clock" id="clock"></h3>
+    </div>
+    <script src="scripts/sketch.js"></script>
+</body>
+
+</html>

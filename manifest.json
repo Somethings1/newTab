@@ -1,0 +1,41 @@
+{
+    "name": "New tab page",
+    "author": "Nguyen Trung Long",
+    "version": "1.0",
+    "description": "Change the New Tab page of chrome",
+    "web_accessible_resources": [
+		"videos/*.mp4"
+	],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "new.html"
+    },
+    "background": {
+        "scripts": [
+            "scripts/background.js",
+            "scripts/config.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "New tab",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "options_page": "settings.html",
+    "manifest_version": 2
+}
