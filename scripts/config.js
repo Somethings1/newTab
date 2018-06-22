@@ -4,7 +4,8 @@ const defaultConf = {
     greeting: {
         text: "-hello-, -name-",
         color: "white",
-        size: 64
+        size: 64,
+        animation: "top"
     },
     clock: {
         color: "white",

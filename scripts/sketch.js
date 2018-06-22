@@ -36,6 +36,9 @@ chrome.storage.sync.get(result => {
             background.style.zIndex = "0";
         }
 
+        //Greeting text animation
+        welcome.style.animationName = conf.greeting.animation == "top" ? "helloTop" : "helloLeft";
+
         //Position of greeting text
         switch([conf.clock.horizontalAlign, conf.clock.verticalAlign].join(' ')) {
             case "left top": {

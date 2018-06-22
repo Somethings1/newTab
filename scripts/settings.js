@@ -15,6 +15,7 @@ const getConfig = () => {//show current option to settings page
         _id("grt_text").value = config.greeting.text;
         _id("grt_clr_" + config.greeting.color).checked = true;
         _id("grt_font").value = config.greeting.size;
+        _id("grt_anm_" + config.greeting.animation).checked = true;
 
         //Clock section
         _id("clk_clr_" + config.clock.color).checked = true;
@@ -31,7 +32,8 @@ const setConfig = () => {//Save the new settings
         greeting: {
             text: _id("grt_text").value,
             color: (_id("grt_clr_white").checked ? "white" : "black"),
-            size: _id("grt_font").value
+            size: _id("grt_font").value,
+            animation: _id("grt_anm_top").checked ? "top" : "left"
         },
         clock: {
             color: (_id("clk_clr_white").checked ? "white" : "black"),
@@ -42,7 +44,7 @@ const setConfig = () => {//Save the new settings
         backgroundType: (_id("video").checked ? "video" : "image"),
         imageURL: _id("imgURL").value
     }
-    chrome.storage.sync.set({config: conf});
+    chrome.storage.sync.set({config: conf}, () => alert("Configuration saved successfully!"));
 }
 
 const resetConfig = () => {
@@ -59,10 +61,9 @@ const resetConfig = () => {
     //Add events
     imageL.addEventListener("change", () => hide.style.display = "block");
     videoL.addEventListener("change", () => hide.style.display = "none");
-    save.addEventListener("click", () => alert("Configuration has been saved successfully!"));
+    save.addEventListener("click", () => setConfig());
     cancel.addEventListener("click", () => window.close());
     reset.addEventListener("click", () => resetConfig());
-    document.body.addEventListener("change", () => setConfig());
 
     getConfig();
 })();

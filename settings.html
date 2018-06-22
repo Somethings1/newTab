@@ -16,6 +16,7 @@
         <div class="config-section">
             <h1>Generation</h1>
             <div class="small-section">
+                <div class="tooltip">The name you wanna be called by</div>
                 <div class="left inside">Name</div>
                 <div class="right inside">
                     <input class="effect-2" type="text" placeholder="Name you wanna be called" id="name">
@@ -23,6 +24,7 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Time format of the clock</div>
                 <div class="left inside">Time Format</div>
                 <div class="right inside">
                     <label for="h12" class="btn-radio">
@@ -37,7 +39,7 @@
                         <span>12h</span>
                     </label>
                     <label for="h24" class="btn-radio">
-                        <input type="radio" id="h24" name="radio-grp1" >
+                        <input type="radio" id="h24" name="radio-grp1">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -50,6 +52,7 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Type of background</div>
                 <div class="left inside">Background type</div>
                 <div class="right inside">
                     <label for="image" class="btn-radio" id="imageL">
@@ -64,7 +67,7 @@
                         <span>Image</span>
                     </label>
                     <label for="video" class="btn-radio" id="videoL">
-                        <input type="radio" id="video" name="radio-grp2" >
+                        <input type="radio" id="video" name="radio-grp2">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -77,6 +80,7 @@
                 </div>
             </div>
             <div class="small-section" id="hide">
+                <div class="tooltip">URL of wallpaper. I recommend use a local link</div>
                 <div class="left inside">Image URL</div>
                 <div class="right inside">
                     <input class="effect-2" type="text" placeholder="The wallpaper's URL" id="imgURL">
@@ -87,6 +91,7 @@
         <div class="config-section">
             <h1>Greeting</h1>
             <div class="small-section">
+                <div class="tooltip">Text appear in new tab. Use -name- pattern for the name above, and -hello- for "Good morning" text</div>
                 <div class="left inside">Text</div>
                 <div class="right inside">
                     <input class="effect-2" type="text" placeholder="The greeting text in new tab" id="grt_text">
@@ -94,6 +99,7 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Color of greeting text</div>
                 <div class="left inside">Color</div>
                 <div class="right inside">
                     <label for="grt_clr_black" class="btn-radio">
@@ -121,20 +127,50 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Font size of greeting text in px</div>
                 <div class="left inside">Font size</div>
                 <div class="right inside">
                     <input class="effect-2" type="number" placeholder="Font size in pixel" id="grt_font">
                     <span class="focus-border"></span>
                 </div>
             </div>
+            <div class="small-section">
+                <div class="tooltip"></div>
+                <div class="left inside">Animation</div>
+                <div class="right inside">
+                    <label for="grt_anm_left" class="btn-radio">
+                        <input type="radio" id="grt_anm_left" name="radio-grp6">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="9"></circle>
+                            <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                class="inner"></path>
+                            <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                class="outer"></path>
+                        </svg>
+                        <span>Left to center</span>
+                    </label>
+                    <label for="grt_anm_top" class="btn-radio">
+                        <input type="radio" id="grt_anm_top" name="radio-grp6">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="9"></circle>
+                            <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                class="inner"></path>
+                            <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                class="outer"></path>
+                        </svg>
+                        <span>Top to middle</span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div class="config-section">
             <h1>Clock</h1>
             <div class="small-section">
+                <div class="tooltip">Color of Clock</div>
                 <div class="left inside">Color</div>
                 <div class="right inside">
                     <label for="clk_clr_black" class="btn-radio">
-                        <input type="radio" id="clk_clr_black" name="radio-grp6">
+                        <input type="radio" id="clk_clr_black" name="radio-grp7">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -145,7 +181,7 @@
                         <span>Black</span>
                     </label>
                     <label for="clk_clr_white" class="btn-radio">
-                        <input type="radio" id="clk_clr_white" name="radio-grp6" >
+                        <input type="radio" id="clk_clr_white" name="radio-grp7">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -158,6 +194,7 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Font size of clock in px</div>
                 <div class="left inside">Font size</div>
                 <div class="right inside">
                     <input class="effect-2" type="number" placeholder="Font size in pixel" id="clk_font">
@@ -165,10 +202,11 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Align the clock Vertically</div>
                 <div class="left inside">Vertical Alignment</div>
                 <div class="right inside">
                     <label for="clk_valg_top" class="btn-radio">
-                        <input type="radio" id="clk_valg_top" name="radio-grp7">
+                        <input type="radio" id="clk_valg_top" name="radio-grp8">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -179,7 +217,7 @@
                         <span>Top</span>
                     </label>
                     <label for="clk_valg_center" class="btn-radio">
-                        <input type="radio" id="clk_valg_center" name="radio-grp7">
+                        <input type="radio" id="clk_valg_center" name="radio-grp8">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -190,7 +228,7 @@
                         <span>Center</span>
                     </label>
                     <label for="clk_valg_bottom" class="btn-radio">
-                        <input type="radio" id="clk_valg_bottom" name="radio-grp7" >
+                        <input type="radio" id="clk_valg_bottom" name="radio-grp8">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -203,10 +241,11 @@
                 </div>
             </div>
             <div class="small-section">
+                <div class="tooltip">Align the clock Horizontally</div>
                 <div class="left inside">Horizontal Alignment</div>
                 <div class="right inside">
                     <label for="clk_halg_left" class="btn-radio">
-                        <input type="radio" id="clk_halg_left" name="radio-grp8">
+                        <input type="radio" id="clk_halg_left" name="radio-grp9">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -217,7 +256,7 @@
                         <span>Left</span>
                     </label>
                     <label for="clk_halg_center" class="btn-radio">
-                        <input type="radio" id="clk_halg_center" name="radio-grp8">
+                        <input type="radio" id="clk_halg_center" name="radio-grp9">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
@@ -228,7 +267,7 @@
                         <span>Center</span>
                     </label>
                     <label for="clk_halg_right" class="btn-radio">
-                        <input type="radio" id="clk_halg_right" name="radio-grp8" >
+                        <input type="radio" id="clk_halg_right" name="radio-grp9">
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="9"></circle>
                             <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"

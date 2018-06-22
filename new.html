@@ -18,11 +18,17 @@
             src: url(fonts/Nunito-Regular.ttf);
             font-family: sans;
         }
-        @keyframes hello{
-            0% { opacity: 0; }
-            30% { opacity: 1; }
-            70% { opacity: 1; }
-            100% { opacity: 0; }
+        @keyframes helloTop {
+            0% { opacity: 0; transform: translateY(-100%); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-100%); }
+        }
+        @keyframes helloLeft {
+            0% { opacity: 0; transform: translateX(-50%); }
+            20% { opacity: 1; transform: translateX(0); }
+            80% { opacity: 1; transform: translateX(0); }
+            100% { opacity: 0; transform: translateX(-50%); }
         }
         .container {
             width: 100vw;
@@ -40,7 +46,7 @@
             opacity: 0;
             margin-bottom: 50px;
             animation-name: hello;
-            animation-duration: 10s;
+            animation-duration: 8s;
             animation-delay: .5s;
         }
         .clock {

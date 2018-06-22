@@ -1,3 +1,4 @@
+/* General */
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +8,8 @@
 ::-webkit-scrollbar {
     display: none 
 }
+
+/* Content */
 .container {
     width: 100%;
     min-height: 100%;
@@ -41,6 +44,36 @@
 h1 {
     text-align: center;
 }
+.small-section {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+.inside {
+    display: inline-block;
+    width: 45%;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+#hide {
+    display: none;
+}
+.small-section:hover {
+    background: rgba(0, 0, 0, .1)
+}
+.small-section:hover .tooltip {
+    visibility: visible
+}
+
+/* Buttons */
 .button {
     background: transparent;
     box-shadow: none;
@@ -63,11 +96,11 @@ h1 {
     letter-spacing: 6;
 }
 #save {
-    border: 2px solid #55acee;
-    color: #55acee;
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
 }
 #save:hover {
-    background: #55acee;
+    background: #2ecc71;
     color: #fff;
 }
 #cancel {
@@ -86,30 +119,8 @@ h1 {
     background: orange;
     color: #fff;
 }
-.small-section {
-    width: 100%;
-    border-radius: 5px;
-}
-.inside {
-    display: inline-block;
-    width: 45%;
-    padding: 15px;
-    font-size: 16px;
-    box-sizing: border-box;
-    position: relative;
-}
-.right {
-    text-align: right;
-}
-.left {
-    text-align: left;
-}
-#hide {
-    display: none;
-}
-.small-section:hover {
-    background: rgba(0, 0, 0, .1)
-}
+
+/* Inputs */
 :focus {
     outline: none;
 }
@@ -143,6 +154,8 @@ input[type="text"],input[type="number"] {
     transition: 0.4s;
     left: 0;
 }
+
+/* Radio buttons */
 .btn-radio {
     cursor: pointer;
     display: inline-block;
@@ -190,6 +203,33 @@ input[type="text"],input[type="number"] {
     display: inline-block;
     vertical-align: middle;
 }
+
+/* Tooltips */
+.tooltip {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50px; 
+    z-index: 999;
+}
+.tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 20px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+/* Responsive */
 @media screen and (max-width: 850px) {
     .config-section {
         width: 100%;
